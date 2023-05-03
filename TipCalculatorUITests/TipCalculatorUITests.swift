@@ -38,3 +38,29 @@ import XCTest
          //Clean up
      }
 }
+
+class whenCalculateTipButtonIsPressed: XCTestCase {
+    private var app: XCUIApplication!
+    
+    override func setUp() {
+        app = XCUIApplication()
+        continueAfterFailure = false
+        app.launch()
+        
+        let totalTextField = app.textFields["totalTextField"]
+        totalTextField.tap()
+        totalTextField.typeText("100")
+        
+        let calculateTipButton = app.buttons["calculateTipButton"]
+        
+        calculateTipButton.tap()
+    }
+    
+    func testShouldMakeSureThatTipIsDisplayedOnTheScreen(){
+        
+        let tipText = app.staticTexts["tipText"]
+        let _ = tipText.waitForExistence(timeout: 0.5)
+        XCTAssertEqual(tipText.label, "$15.00")
+        
+    }
+}

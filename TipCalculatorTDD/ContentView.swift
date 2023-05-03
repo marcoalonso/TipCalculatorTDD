@@ -64,7 +64,9 @@ struct ContentView: View {
                         .background(Color.gray)
                         .cornerRadius(16)
                         .padding(10)
+                        
                 }
+                .accessibilityIdentifier("calculateTipButton")
 
                 Text(message)
                     .padding(.top, 40)
@@ -74,6 +76,7 @@ struct ContentView: View {
                 
                 Text(tip ?? "")
                 .font(.system(size: 54))
+                .accessibilityIdentifier("tipText")
                 
                 Image("calculator")
                     .resizable()
