@@ -11,7 +11,18 @@
 		6C8B0F1B2A01DE3300E29FF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B0F1A2A01DE3300E29FF5 /* ContentView.swift */; };
 		6C8B0F1D2A01DE3500E29FF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B0F1C2A01DE3500E29FF5 /* Assets.xcassets */; };
 		6C8B0F202A01DE3500E29FF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B0F1F2A01DE3500E29FF5 /* Preview Assets.xcassets */; };
+		6C8B0F2D2A01FC6800E29FF5 /* TipCalculatorUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8B0F2C2A01FC6800E29FF5 /* TipCalculatorUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6C8B0F2E2A01FC6800E29FF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C8B0F0D2A01DE3300E29FF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C8B0F142A01DE3300E29FF5;
+			remoteInfo = TipCalculatorTDD;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6C8B0F152A01DE3300E29FF5 /* TipCalculatorTDD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCalculatorTDD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		6C8B0F1A2A01DE3300E29FF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6C8B0F1C2A01DE3500E29FF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8B0F1F2A01DE3500E29FF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6C8B0F2A2A01FC6700E29FF5 /* TipCalculatorUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C8B0F2C2A01FC6800E29FF5 /* TipCalculatorUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6C8B0F122A01DE3300E29FF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8B0F272A01FC6700E29FF5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				6C8B0F172A01DE3300E29FF5 /* TipCalculatorTDD */,
+				6C8B0F2B2A01FC6800E29FF5 /* TipCalculatorUnitTests */,
 				6C8B0F162A01DE3300E29FF5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				6C8B0F152A01DE3300E29FF5 /* TipCalculatorTDD.app */,
+				6C8B0F2A2A01FC6700E29FF5 /* TipCalculatorUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6C8B0F2B2A01FC6800E29FF5 /* TipCalculatorUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C8B0F2C2A01FC6800E29FF5 /* TipCalculatorUnitTests.swift */,
+			);
+			path = TipCalculatorUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = 6C8B0F152A01DE3300E29FF5 /* TipCalculatorTDD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6C8B0F292A01FC6700E29FF5 /* TipCalculatorUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C8B0F302A01FC6800E29FF5 /* Build configuration list for PBXNativeTarget "TipCalculatorUnitTests" */;
+			buildPhases = (
+				6C8B0F262A01FC6700E29FF5 /* Sources */,
+				6C8B0F272A01FC6700E29FF5 /* Frameworks */,
+				6C8B0F282A01FC6700E29FF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C8B0F2F2A01FC6800E29FF5 /* PBXTargetDependency */,
+			);
+			name = TipCalculatorUnitTests;
+			productName = TipCalculatorUnitTests;
+			productReference = 6C8B0F2A2A01FC6700E29FF5 /* TipCalculatorUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					6C8B0F142A01DE3300E29FF5 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					6C8B0F292A01FC6700E29FF5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 6C8B0F142A01DE3300E29FF5;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				6C8B0F142A01DE3300E29FF5 /* TipCalculatorTDD */,
+				6C8B0F292A01FC6700E29FF5 /* TipCalculatorUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				6C8B0F202A01DE3500E29FF5 /* Preview Assets.xcassets in Resources */,
 				6C8B0F1D2A01DE3500E29FF5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C8B0F282A01FC6700E29FF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6C8B0F262A01FC6700E29FF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8B0F2D2A01FC6800E29FF5 /* TipCalculatorUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C8B0F2F2A01FC6800E29FF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6C8B0F142A01DE3300E29FF5 /* TipCalculatorTDD */;
+			targetProxy = 6C8B0F2E2A01FC6800E29FF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6C8B0F212A01DE3500E29FF5 /* Debug */ = {
@@ -317,6 +393,42 @@
 			};
 			name = Release;
 		};
+		6C8B0F312A01FC6800E29FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Z45T22J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rotadevsolutions.TipCalculatorUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TipCalculatorTDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TipCalculatorTDD";
+			};
+			name = Debug;
+		};
+		6C8B0F322A01FC6800E29FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 28Z45T22J2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rotadevsolutions.TipCalculatorUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TipCalculatorTDD.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TipCalculatorTDD";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +446,15 @@
 			buildConfigurations = (
 				6C8B0F242A01DE3500E29FF5 /* Debug */,
 				6C8B0F252A01DE3500E29FF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C8B0F302A01FC6800E29FF5 /* Build configuration list for PBXNativeTarget "TipCalculatorUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C8B0F312A01FC6800E29FF5 /* Debug */,
+				6C8B0F322A01FC6800E29FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
