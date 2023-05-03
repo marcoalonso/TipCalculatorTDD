@@ -23,7 +23,9 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                 
                 Picker(selection: $tipPercentage) {
+                    Text("5%").tag(0.05)
                     Text("10%").tag(0.1)
+                    Text("15%").tag(0.15)
                     Text("20%").tag(0.2)
                     Text("30%").tag(0.3)
                 } label: {
