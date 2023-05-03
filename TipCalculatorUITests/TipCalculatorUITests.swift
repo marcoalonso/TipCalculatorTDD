@@ -11,22 +11,26 @@ import XCTest
      
      private var app: XCUIApplication!
      
+     private var contentViewPage: ContentViewPage!
+     
      override func setUp() {
          app = XCUIApplication()
+         contentViewPage = ContentViewPage(app: app)
+         
          continueAfterFailure = false
          app.launch()
      }
 
      func test_should_make_sure_that_the_total_text_field_contains_default_value(){
          
-         let totalTextField = app.textFields["totalTextField"]
-         XCTAssertEqual(totalTextField.value as! String, "Enter total")
+//         let totalTextField = app.textFields["totalTextField"]
+         XCTAssertEqual(contentViewPage.totalTextField.value as! String, "Enter total")
      }
      
      func test_should_make_sure_the_15_percent_default_tip_option_is_selected() {
 
-         let tipPercentageSegmentedControl = app.segmentedControls["tipPercentageSegmentedControl"]
-         let segmentedControlButton = tipPercentageSegmentedControl.buttons.element(boundBy: 2)
+//         let tipPercentageSegmentedControl = app.segmentedControls["tipPercentageSegmentedControl"]
+         let segmentedControlButton = contentViewPage.tipPercentageSegmentedControl.buttons.element(boundBy: 2)
          
          XCTAssertEqual(segmentedControlButton.label, "15%") ///- Label has 15% text
          XCTAssertTrue(segmentedControlButton.isSelected) ///- We can validate other properties
@@ -40,25 +44,31 @@ import XCTest
 }
 
 class whenCalculateTipButtonIsPressedForValidInput: XCTestCase {
+    
+    private var contentViewPage: ContentViewPage!
+    
     private var app: XCUIApplication!
     
     override func setUp() {
         app = XCUIApplication()
+        contentViewPage = ContentViewPage(app: app)
+        
         continueAfterFailure = false
         app.launch()
         
-        let totalTextField = app.textFields["totalTextField"]
+        let totalTextField = contentViewPage.totalTextField
+        
         totalTextField.tap()
         totalTextField.typeText("100")
     }
     
     func testShouldMakeSureThatTipIsDisplayedOnTheScreen(){
         
-        let calculateTipButton = app.buttons["calculateTipButton"]
+        let calculateTipButton = contentViewPage.calculateTipButton
         
         calculateTipButton.tap()
         
-        let tipText = app.staticTexts["tipText"]
+        let tipText = contentViewPage.tipText
         let _ = tipText.waitForExistence(timeout: 0.5)
         XCTAssertEqual(tipText.label, "$15.00")
         
@@ -70,9 +80,12 @@ class whenCalculateTipButtonIsPressedForValidInput: XCTestCase {
 class when_calculate_tip_button_is_pressed_for_invalid_input: XCTestCase {
     
     private var app: XCUIApplication!
+    private var contentViewPage: ContentViewPage!
     
     override func setUp() {
         app = XCUIApplication()
+        contentViewPage = ContentViewPage(app: app)
+        
         continueAfterFailure = false
         app.launch()
         
