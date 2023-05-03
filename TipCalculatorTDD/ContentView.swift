@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var total: String = ""
-    @State private var tipPercentage: Double = 0.2
+    @State private var tipPercentage: Double = 0.15
     @State private var tip: String?
     @State private var message: String = ""
     
@@ -24,6 +24,7 @@ struct ContentView: View {
                 TextField("Enter total", text: $total)
                     .textFieldStyle(.roundedBorder)
                     .keyboardType(.numbersAndPunctuation)
+                    .accessibilityIdentifier("totalTextField")
                 
                 Picker(selection: $tipPercentage) {
                     Text("5%").tag(0.05)
@@ -34,6 +35,7 @@ struct ContentView: View {
                 } label: {
                     EmptyView()
                 }.pickerStyle(.segmented)
+                    .accessibilityIdentifier("tipPercentageSegmentedControl")
                 
                 
                 Button {
